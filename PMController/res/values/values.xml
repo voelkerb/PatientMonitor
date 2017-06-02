@@ -1,0 +1,43 @@
+<resources>
+
+	<!--  Slider max and mins -->
+	<item type="integer" name="range_heart_rate_slider" format="integer">230</item>
+	<item type="integer" name="min_heart_rate_slider" format="integer">20</item>
+	<item type="integer" name="init_heart_rate_slider" format="integer">49</item>
+	
+	<item type="integer" name="range_o2_rate_slider" format="integer">60</item>
+	<item type="integer" name="min_o2_rate_slider" format="integer">40</item>
+	<item type="integer" name="init_o2_rate_slider" format="integer">58</item>
+	
+	<item type="integer" name="range_co2_rate_slider" format="integer">85</item>
+	<item type="integer" name="min_co2_rate_slider" format="integer">15</item>
+	<item type="integer" name="init_co2_rate_slider" format="integer">20</item>
+	
+	<item type="integer" name="range_raspiration_rate_slider" format="integer">50</item>
+	<item type="integer" name="min_raspiration_rate_slider" format="integer">0</item>
+	<item type="integer" name="init_raspiration_rate_slider" format="integer">18</item>
+	
+	<item type="integer" name="range_blood_pressure_systolic_slider" format="integer">240</item>
+	<item type="integer" name="min_blood_pressure_systolic_slider" format="integer">20</item>
+	<item type="integer" name="init_blood_pressure_systolic_slider" format="integer">100</item>
+	
+	<item type="integer" name="range_blood_pressure_diastolic_slider" format="integer">140</item>
+	<item type="integer" name="min_blood_pressure_diastolic_slider" format="integer">10</item>
+	<item type="integer" name="init_blood_pressure_diastolic_slider" format="integer">70</item>
+	
+	<item type="integer" name="range_scheduler_slider" format="integer">60</item>
+	<item type="integer" name="min_scheduler_slider" format="integer">0</item>
+	<item type="integer" name="init_scheduler_slider" format="integer">2</item>
+	
+	
+	<!-- The weights of the sliders and bars -->
+	<item type="integer" name="vertical_slider_horizontal_space_weight" format="integer">1</item>
+	<item type="integer" name="vertical_slider_horizontal_weight" format="integer">2</item>
+	<item type="integer" name="vertical_slider_weight" format="integer">40</item>
+	<item type="integer" name="vertical_slider_button_weight" format="integer">6</item>
+	<item type="integer" name="vertical_slider_value_weight" format="integer">5</item>
+	<item type="integer" name="vertical_slider_image_weight" format="integer">7</item>
+	<item type="integer" name="vertical_space_weight_top" format="integer">3</item>
+	<item type="integer" name="vertical_space_weight" format="integer">1</item>
+	<item type="integer" name="sidebar_horizontal_weight" format="integer">3</item>
+</resources>

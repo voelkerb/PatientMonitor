@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="${relativePackage}.${activityClass}"
+    android:background="@color/background_color"  
+    android:orientation="vertical">
+    
+    <!-- Weighted from top beginning with a space -->
+    <Space 
+		android:layout_width="wrap_content"
+		android:layout_height="0dp"
+		android:layout_weight="1"/>
+	   
+    <!-- The start button -->
+	<ImageButton
+	  	android:id="@+id/start_button"
+	    android:layout_width="@dimen/start_button_dimen"
+		android:layout_height="0dp"
+		android:layout_weight="20"
+	    android:layout_gravity="center"
+	    android:gravity="center"
+		android:scaleType="centerInside"
+		android:background="@null"
+		android:src="@drawable/onbutton_gray"
+		android:contentDescription="@string/start_button"
+	    android:onClick="startPressed" />
+	
+	<!-- The text view with either the string "not connected to wifi" or wifi connection information -->
+	<TextView
+	  	android:id="@+id/connection_textview"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:gravity="center"
+		android:keepScreenOn="true"
+		android:text="@string/check_connection"
+		android:textColor="#33b5e5"
+		android:textSize="@dimen/activity_text_size"/>
+	   
+	<!-- horizontal linear layout with Session name and change session button -->
+	 <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+   
+	    <Space 
+	        android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"/>
+	    
+	    <TextView
+	    	android:id="@+id/service_name_text"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:gravity="center"
+			android:keepScreenOn="true"
+			android:text="@string/check_connection_ip2"
+			android:textColor="#33b5e5"
+			android:textSize="@dimen/activity_text_size"/>
+	     
+	 	<ImageButton
+		        android:id="@+id/change_service_name_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginLeft="40dp"
+		        android:gravity="center"
+				android:background="@null"
+				android:src="@drawable/ic_action_edit"
+				android:contentDescription="@string/start_button"
+		        android:onClick="changeServiceName" />
+
+	    <Space 
+	        android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"/>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scenario_background_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context="gui.ScenarioActivity" >
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="65dp"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/listViewScenario"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice" 
+        	android:background="@color/bar_color">
+        </ListView>
+
+	    <Space
+	        android:layout_width="50dp"
+	        android:layout_height="match_parent"
+	        android:background="@color/background_color" />
+
+	    <ListView
+	        android:id="@+id/listViewEvents"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:choiceMode="singleChoice" 
+        	android:background="@color/bar_color">
+	    </ListView>
+
+    </LinearLayout>
+	    
+	<LinearLayout
+	      	android:id="@+id/LinearLayout3"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:background="@drawable/bottom_bar"
+	        android:orientation="horizontal" >
+
+	        
+	        <Button
+	            android:id="@+id/delete_scenario_button"
+	            style="@style/apply_button"
+	            android:layout_width="200dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:background="@drawable/red_button"
+	            android:drawableLeft="@drawable/ic_action_cancel" 
+	            android:onClick="deleteScenario"
+	            android:text="@string/delete_scenario_button"/>
+	        
+	        <Space
+	            android:layout_width="50dp"
+	            android:layout_height="wrap_content" />
+	        
+	        <Space
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content" />
+	        
+	        
+	        <Button	            
+	            android:id="@+id/pause_button"
+	            style="@style/apply_button"
+	            android:text="@string/pause"
+	            android:layout_width="0dp"
+	            android:layout_weight="2"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dp"
+	            android:drawableLeft="@android:drawable/ic_media_pause"
+	            android:background="@drawable/blue_button"
+	            android:contentDescription="@string/play_button"
+	            android:onClick="pauseScenario"/>
+		
+	        <Space
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content" />
+	        
+	        <Button
+	            android:id="@+id/play_button"
+	            style="@style/apply_button"
+	            android:drawableLeft="@android:drawable/ic_media_play"
+	            android:layout_width="0dp"
+	            android:layout_weight="2"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dp"
+	            android:background="@drawable/green_button"
+	            android:contentDescription="@string/pause_button"
+	            android:text="@string/play"
+	            android:onClick="startScenario"/>
+	
+	        <Space
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content" />
+	
+	 	        
+	        <Button
+	            android:id="@+id/stop_button"
+	            style="@style/apply_button"
+	            android:layout_width="0dp"
+	            android:layout_weight="2"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dp"
+	            android:background="@drawable/red_button"
+	            android:drawableLeft="@drawable/ic_media_stop"
+	            android:text="@string/stop"
+	            android:contentDescription="@string/stop_button"
+	            android:onClick="stopScenarioCallback"
+	            android:padding="3dp"/>
+	       
+	        <Space
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content" />
+	        
+    	</LinearLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+		<Space
+		    android:layout_height="match_parent"
+		    android:layout_width="500dp"/>
+
+		<TextView
+		    android:id="@+id/scenarioTimer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/timer"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	</LinearLayout>
+
+</LinearLayout>

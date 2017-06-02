@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetBottom="@dimen/negative_sperator_size"
+    android:insetLeft="@dimen/negative_sperator_size"
+    android:insetRight="@dimen/negative_sperator_size"
+    android:insetTop="0dp" >
+ 
+    <shape>
+        <stroke
+            android:width="@dimen/sperator_size"
+            android:color="#ff33b5e5" />
+        
+        <solid android:color="@color/bar_color" />
+        
+    </shape>
+ 
+</inset>

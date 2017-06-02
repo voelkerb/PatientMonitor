@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pmcontroller1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- The SDK Version this app should run at -->
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+	    
+    <!-- Permissions for internet and Wifi Network state access -->
+	<uses-permission android:name="android.permission.INTERNET" >
+	</uses-permission>
+	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+	</uses-permission>
+	    
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+	</uses-permission> 
+	
+	<!-- App can not be run at displays with a smaller resolution than 600dp -->
+	<supports-screens android:smallScreens="false"
+	                      android:normalScreens="false"
+	                      android:largeScreens="true"
+	                      android:xlargeScreens="true"
+	                      android:requiresSmallestWidthDp="600" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- Main Activity the User sees when he starts the app, is singletop 
+        so that it can only be opened once, Landscape only, so that the onResume is not called 
+        again and again, when the user turns the device -->
+        <activity
+            android:name="gui.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Controller Activity where the vital parameters of the patient can be set, also singletop 
+        to let changes be applied when the user navigates to other activitys and back, Landscape only -->
+        <activity
+            android:name="gui.ControllerActivity"
+            android:label="@string/title_activity_controller"
+            android:parentActivityName="gui.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        
+        <!-- Preference Activity  -->
+        <activity
+            android:name="gui.PreferenceActivity"
+            android:label="@string/title_activity_preference"
+            android:parentActivityName="gui.ControllerActivity" 
+            android:screenOrientation="sensorLandscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ControllerActivity" />
+        </activity>
+        
+        <!-- Scenario Activity -->
+        <activity
+            android:name="gui.ScenarioActivity"
+            android:label="@string/title_activity_scenario"
+            android:parentActivityName="gui.ControllerActivity"
+            android:screenOrientation="sensorLandscape"  >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ControllerActivity" />
+        </activity>
+        
+        <!-- Protocoll Activity -->
+        <activity
+            android:name="gui.ProtocollActivity"
+            android:label="@string/title_activity_protocoll"
+            android:parentActivityName="gui.ControllerActivity" 
+            android:screenOrientation="sensorLandscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ControllerActivity" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical" >
+
+        <View
+            android:id="@+id/redLine"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:background="@android:color/holo_red_dark"/>
+    
+    <LinearLayout
+        android:id="@+id/upperRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/activatedBackgroundIndicator"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/element1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/ekgHeartImageView"
+                android:layout_width="@dimen/heart_size"
+                android:layout_height="@dimen/heart_size"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/ekgHeartDesc"
+                android:src="@drawable/herz" />
+
+            <TextView
+                android:id="@+id/ekgVariable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/dummy_string_scenario_table"
+                android:textColor="@color/green"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/o2_rate_table_entry"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/o2Variable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/dummy_string_scenario_table"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/o2_rate_slider_value"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/co2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/co2_rate_table_entry"
+                android:textColor="@color/lBlue"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/co2Variable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/dummy_string_scenario_table"
+                android:textColor="@color/lBlue"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/co2_rate_slider_value"
+                android:textColor="@color/lBlue"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/respText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/respText"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/respValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+            
+            <TextView
+                android:id="@+id/respUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/respUnit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/rrText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blood_pressure_table_entry"
+                android:textColor="@color/red"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/rrSys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash"
+                android:textColor="@color/red"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/rrDias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blood_pressure_table_value"
+                android:textColor="@color/red"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lowerRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/activatedBackgroundIndicator"        
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/heartPattern"
+                android:visibility="invisible"
+                android:layout_width="@dimen/heartPattern_size"
+                android:layout_height="@dimen/heartPattern_size"
+                android:contentDescription="@string/heartPattern"
+                android:src="@drawable/hr_sine" />
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/o2Pattern"
+                android:visibility="invisible"
+                android:layout_width="@dimen/heartPattern_size"
+                android:layout_height="@dimen/heartPattern_size"
+                android:contentDescription="@string/o2Pattern"
+                android:src="@drawable/o2_normal" />
+            
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/co2Pattern"
+                android:visibility="invisible"
+                android:layout_width="@dimen/heartPattern_size"
+                android:layout_height="@dimen/heartPattern_size"
+                android:contentDescription="@string/co2Pattern"
+                android:src="@drawable/co2_normal" />  
+                
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/respPattern"
+                android:visibility="invisible"
+                android:layout_width="@dimen/heartPattern_size"
+                android:layout_height="@dimen/heartPattern_size"
+                android:contentDescription="@string/respPattern"
+                android:src="@drawable/raspiration_normal" />            
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="wrap_content" />           
+
+            <ImageView
+                android:id="@+id/bpPattern"
+                android:visibility="invisible"
+                android:layout_width="@dimen/heartPattern_size"
+                android:layout_height="@dimen/heartPattern_size"
+                android:contentDescription="@string/bpPattern"
+                android:src="@drawable/bp_normal" />     
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/alarmClock"
+                android:layout_width="@dimen/alarm_size"
+                android:layout_height="@dimen/alarm_size"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@android:drawable/ic_lock_idle_alarm" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/timeUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_table_entry"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/timestampImage"
+                android:layout_width="@dimen/heart_size"
+                android:layout_height="@dimen/heart_size"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@android:drawable/ic_menu_recent_history" />
+
+            <TextView
+                android:id="@+id/timestampMinutesTens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+            
+            <TextView
+                android:id="@+id/timestampMinutesOnes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/timeStampColon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/colon"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />
+            
+            <TextView
+                android:id="@+id/timestampSecondsTens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />            
+                
+            <TextView
+                android:id="@+id/timestampSecondsOnes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size" />            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/cuff"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@android:drawable/stat_notify_error" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flagLayout"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/flagText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/flag"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</LinearLayout>

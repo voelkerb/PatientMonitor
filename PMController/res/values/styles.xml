@@ -1,0 +1,165 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+    <!-- Application theme. -->
+    <style 	name="AppTheme"
+        	parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+	<!-- ActionBar styles -->
+    <style name="ActionBar"
+           parent="@android:style/Widget.Holo.ActionBar">
+     <item name ="android:background">@drawable/action_bar</item>
+    </style>
+    
+    
+    
+   <!-- The stly of the reset timer button -->
+   <style name="reset_button" >
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:textColor" >#ffffff</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_marginLeft" >10dp</item>
+    <item name="android:layout_marginRight" >10dp</item>
+    <item name="android:layout_marginBottom" >10dp</item>
+    <item name="android:textSize" >@dimen/medium_text_size</item>
+  </style>
+  
+   <!--  the style of the apply and dismiss button -->
+   <style name="apply_button" >
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:background" >@drawable/red_button</item>
+    <item name="android:textColor" >#ffffff</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_margin" >10dp</item>
+    <item name="android:textSize" >25sp</item>
+    <item name="android:textStyle" >bold</item>
+    <item name="android:shadowColor" >#000000</item>
+    <item name="android:shadowDx" >1</item>
+    <item name="android:shadowDy" >1</item>
+    <item name="android:shadowRadius" >2</item>
+  </style>
+  
+   
+   <!--  the style of the scenario button -->
+   <style name="scenario_button" >
+    <item name="android:layout_width" >fill_parent</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:textColor" >#ffffff</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_marginLeft" >10dp</item>
+    <item name="android:layout_marginRight" >10dp</item>
+    <item name="android:layout_marginBottom" >10dp</item>
+    <item name="android:textSize" >20sp</item>
+  </style>
+  
+   <!-- The style of the flag button -->
+   <style name="flag_button" >
+    <item name="android:layout_width" >fill_parent</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:textColor" >#ffffff</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_marginLeft" >10dp</item>
+    <item name="android:layout_marginRight" >10dp</item>
+    <item name="android:layout_marginBottom" >10dp</item>
+    <item name="android:textSize" >20sp</item>
+  </style>
+  
+   
+  <style name="delete_scenario_button" >
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:background" >@drawable/red_button</item>
+    <item name="android:textColor" >#ffffff</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_margin" >10dp</item>
+    <item name="android:textSize" >12sp</item>
+    <item name="android:textStyle" >bold</item>
+    <item name="android:shadowColor" >#000000</item>
+    <item name="android:shadowDx" >1</item>
+    <item name="android:shadowDy" >1</item>
+    <item name="android:shadowRadius" >2</item>
+  </style>   
+   
+   
+   
+   <!-- Slider styles -->
+   <style name="vertical_slider_style" >
+    <item name="android:layout_gravity" >center</item>
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_height" >0dp</item>
+    <item name="android:layout_weight" >@integer/vertical_slider_weight</item>
+  </style>
+  
+   <style name="vertical_double_slider_style" >
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >match_parent</item>
+  </style>
+   
+    
+   <!-- curve button above slider -->
+   <style name="curve_button_style" >
+    <item name="android:layout_width" >@dimen/slider_value_max</item>
+    <item name="android:layout_height" >0dp</item>
+    <item name="android:layout_weight" >@integer/vertical_slider_image_weight</item>
+    <item name="android:layout_gravity" >center</item>
+    <item name="android:gravity" >left|top</item>
+    <item name="android:textSize" >@dimen/small_text_size</item>
+    <item name="android:textColor" >@color/slider_text_color</item>
+    <item name="android:background" >@drawable/hr_sine</item>
+    <item name="android:shadowDx" >1</item>
+    <item name="android:shadowDy" >1</item>
+    <item name="android:shadowRadius" >2</item>
+  </style>
+   
+   <style name="slider_active_button_style" >
+    <item name="android:layout_width" >@dimen/slider_value_max</item>
+    <item name="android:layout_height" >0dp</item>
+    <item name="android:layout_weight" >@integer/vertical_slider_button_weight</item>
+    <item name="android:layout_gravity" >center</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:textSize" >@dimen/small_text_size</item>
+    <item name="android:textColor" >@color/slider_text_color</item>
+    <item name="android:background" >@drawable/ic_slider_deactive_button</item>
+  </style>
+
+    
+   <!-- Text Views -->
+   <style name="slider_value_style" >
+    <item name="android:layout_width" >@dimen/slider_value_max</item>
+    <item name="android:layout_height" >0dp</item>
+    <item name="android:layout_weight" >@integer/vertical_slider_value_weight</item>
+    <item name="android:layout_gravity" >center</item>
+    <item name="android:gravity" >top|center_horizontal</item>
+    <item name="android:textSize" >@dimen/small_text_size</item>
+    <item name="android:textColor" >@color/slider_text_color</item>
+    <item name="android:shadowDx" >1</item>
+    <item name="android:shadowDy" >1</item>
+    <item name="android:shadowRadius" >2</item>
+  </style>
+
+   <style name="box_text_style" >
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:layout_gravity" >left</item>
+    <item name="android:layout_marginLeft" >10dp</item>
+    <item name="android:layout_marginTop" >10dp</item>
+    <item name="android:textSize" >@dimen/medium_text_size</item>
+    <item name="android:textColor" >@color/slider_text_color</item>
+  </style>
+   
+   
+   
+   
+   
+   
+</resources>

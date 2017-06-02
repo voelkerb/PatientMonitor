@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.pmcontroller1.ControllerActivity" >
+
+     
+    <item
+        android:id="@+id/action_scenario"
+        android:icon="@drawable/ic_action_important"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_scenario"/>
+    
+    <item
+        android:id="@+id/action_protocoll"
+        android:icon="@drawable/ic_action_view_as_list"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_protocoll"/>
+    
+    
+
+</menu>

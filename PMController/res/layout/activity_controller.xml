@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The main view in Controll (upper part) sliders (middle part) and confirm (lower part) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context="gui.PreferenceActivity" >
+
+    <!-- Middle View -> The Sliders, their names and their values -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="horizontal" >
+
+        <!-- Space from left wall -->
+        <!-- android:layout_width="@dimen/slider_distance" -->
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/vertical_slider_horizontal_space_weight"
+            tools:ignore="NestedWeights" />
+
+     <!-- Slider area cutted in 3 parts: Name text, Seekbar, Value text -->
+     <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight_top" />
+
+            <Spinner
+                android:id="@+id/heart_rate_spinner"
+                style="@style/curve_button_style"
+        		android:prompt="@string/curve_choose_string"
+                />
+ 
+            <Button
+                android:id="@+id/heart_rate_slider_text"
+                style="@style/slider_active_button_style"
+                android:onClick="sliderButtonClicked"
+                android:text="@string/heart_rate_slider_text" />
+
+            <gui.VerticalSeekBar
+                android:id="@+id/heart_rate_slider"
+                style="@style/vertical_slider_style"
+                android:max="@integer/range_heart_rate_slider" />
+
+            <TextView
+                android:id="@+id/heart_rate_slider_value"
+                style="@style/slider_value_style"
+                android:text="@string/heart_rate_slider_value" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight" />
+        </LinearLayout>
+
+        <!-- Space from other slider -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/vertical_slider_horizontal_space_weight" />
+
+        
+        <!-- Next slider -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight_top" />
+
+             <Spinner
+                android:id="@+id/o2_rate_spinner"
+                style="@style/curve_button_style"
+        		android:prompt="@string/curve_choose_string"
+                />
+
+            <Button
+                android:id="@+id/o2_rate_slider_text"
+                style="@style/slider_active_button_style"
+                android:onClick="sliderButtonClicked"
+                android:text="@string/o2_rate_slider_text" />
+
+            <gui.VerticalSeekBar
+                android:id="@+id/o2_rate_slider"
+                style="@style/vertical_slider_style"
+                android:max="@integer/range_o2_rate_slider" />
+
+            <TextView
+                android:id="@+id/o2_rate_slider_value"
+                style="@style/slider_value_style"
+                android:text="@string/o2_rate_slider_value" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/vertical_slider_horizontal_space_weight" />
+
+        
+        <!-- Next slider -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight_top" />
+
+            <Spinner
+                android:id="@+id/co2_rate_spinner"
+                style="@style/curve_button_style"
+        		android:prompt="@string/curve_choose_string"
+                />
+            
+            <Button
+                android:id="@+id/co2_rate_slider_text"
+                style="@style/slider_active_button_style"
+                android:onClick="sliderButtonClicked"
+                android:text="@string/co2_rate_slider_text" />
+
+            <gui.VerticalSeekBar
+                android:id="@+id/co2_rate_slider"
+                style="@style/vertical_slider_style"
+                android:max="@integer/range_co2_rate_slider" />
+
+            <TextView
+                android:id="@+id/co2_rate_slider_value"
+                style="@style/slider_value_style"
+                android:text="@string/co2_rate_slider_value" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight" />
+        </LinearLayout>
+        
+        
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/vertical_slider_horizontal_space_weight" />
+
+        
+        <!-- Next slider -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight_top" />
+
+            <Spinner
+                android:id="@+id/raspiration_rate_spinner"
+                style="@style/curve_button_style"
+        		android:prompt="@string/curve_choose_string"
+                />
+            
+            <Button
+                android:id="@+id/raspiration_rate_slider_text"
+                style="@style/slider_active_button_style"
+                android:onClick="sliderButtonClicked"
+                android:text="@string/raspiration_rate_slider_text" />
+
+            <gui.VerticalSeekBar
+                android:id="@+id/raspiration_rate_slider"
+                style="@style/vertical_slider_style"
+                android:max="@integer/range_raspiration_rate_slider" />
+
+            <TextView
+                android:id="@+id/raspiration_rate_slider_value"
+                style="@style/slider_value_style"
+                android:text="@string/raspiration_rate_slider_value" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight" />
+        </LinearLayout>
+        
+        
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/vertical_slider_horizontal_space_weight" />
+
+        
+        <!-- Next slider -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight_top" />
+
+            <Spinner
+                android:id="@+id/blood_pressure_spinner"
+                style="@style/curve_button_style"
+        		android:prompt="@string/curve_choose_string"
+                />
+            <Button
+                android:id="@+id/blood_pressure_systolic_slider_text"
+                style="@style/slider_active_button_style"
+                android:onClick="sliderButtonClicked"
+                android:text="@string/blood_pressure_systolic_slider_text" />
+
+            <!-- The connected double slider for systolic and diastolic blood pressure -->
+            <LinearLayout style="@style/vertical_slider_style" >
+
+                <gui.VerticalSeekBar
+                    android:id="@+id/blood_pressure_systolic_slider"
+                    style="@style/vertical_double_slider_style"
+                    android:layout_gravity="left"
+                    android:max="@integer/range_blood_pressure_systolic_slider" />
+
+                <gui.VerticalSeekBar
+                    android:id="@+id/blood_pressure_diastolic_slider"
+                    style="@style/vertical_double_slider_style"
+                    android:layout_gravity="right"
+                    android:max="@integer/range_blood_pressure_systolic_slider" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blood_pressure_slider_value"
+                style="@style/slider_value_style"
+                android:text="@string/blood_pressure_slider_value" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="@integer/vertical_space_weight" />
+        </LinearLayout>
+        
+		<!-- Space from right bar -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/vertical_slider_horizontal_space_weight"
+            tools:ignore="NestedWeights" />
+        
+        
+        <!-- Protocoll-, Timer-, Scenario-, Attachment- Boxes -->
+        <View
+            android:layout_width="@dimen/sperator_size"
+            android:layout_height="fill_parent"
+            android:background="@drawable/right_side_bar"/>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="@integer/sidebar_horizontal_weight"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@color/bar_color"
+            android:orientation="vertical" >
+
+            <!-- The Timer and protocoll Buttons -->
+	         <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+		        android:background="@drawable/border_box"
+                android:orientation="vertical" >
+	                
+		        <TextView
+		            style="@style/box_text_style"
+		            android:text="@string/protocoll_box_text"/>
+	
+	            <TextView
+	                android:id="@+id/timer_text_view"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:gravity="right"
+	                android:text="@string/timer_init_text"
+	                android:textColor="@color/slider_text_color"
+	                android:textSize="@dimen/large_text_size" />
+	
+	            <!-- The Timer Start Stop Button -->
+	            <LinearLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal" >
+
+	                <Button
+	                    android:id="@+id/pause_timer_button"
+	                    style="@style/reset_button"
+	                    android:background="@drawable/timer_button"
+	                    android:onClick="pauseTimer"
+	                    android:text="@string/start_timer_button" />
+
+	                <Space
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1" />
+
+	                <Button
+	                    android:id="@+id/reset_timer_button"
+	                    style="@style/reset_button"
+	                    android:background="@drawable/timer_button"
+	                    android:onClick="resetTimer"
+	                    android:text="@string/reset_timer_button" />
+	            </LinearLayout>
+
+	            <Button
+	                android:id="@+id/flag_button"
+	                style="@style/flag_button"
+	                android:background="@drawable/red_button"
+	                android:drawableLeft="@drawable/ic_action_flag"
+	                android:onClick="flagPressed"
+	                android:text="@string/flag_button" />
+
+            </LinearLayout>
+		            
+            <!-- The Add Scenario Button -->
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/border_box"
+		        android:orientation="vertical" >
+		
+		        <TextView
+		            style="@style/box_text_style"
+		            android:text="@string/scenario_box_text"/>
+	            
+	            <Button
+	                android:id="@+id/scenario_button"
+	                style="@style/scenario_button"
+	                android:background="@drawable/yellow_button"
+	                android:drawableLeft="@drawable/ic_action_new"
+	                android:onClick="startStopScenario"
+	                android:text="@string/scenario_start_button" />
+	            
+            </LinearLayout>
+            
+		    <!-- The Attached checkboxes -->
+		  	<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+	            
+		        <TextView
+		            style="@style/box_text_style"
+		            android:text="@string/attachments_box_text"/>
+		        
+	            <CheckBox
+	                android:id="@+id/cuff_checkBox"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:onClick="sliderButtonClicked"
+	                android:text="@string/cuff_checkBox" />
+	            
+        	</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- lower part is devided in text, schedule seekbar and confirm or dismiss button -->
+
+    <!-- android:background="@color/bar_color" -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_bar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/slider_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:text="@string/scheduler_slider_text"
+            android:textColor="@color/slider_text_color"
+            android:textSize="@dimen/small_text_size" />
+
+        <SeekBar
+            android:id="@+id/scheduler_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="10"
+            android:max="@integer/range_scheduler_slider" />
+
+        <TextView
+            android:id="@+id/scheduler_slider_value"
+            android:layout_width="@dimen/slider_value_max"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:text="@string/scheduler_slider_value"
+            android:textColor="@color/slider_text_color"
+            android:textSize="@dimen/small_text_size" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        
+	     <ImageButton
+	        android:id="@+id/apply_button"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            style="@style/apply_button"
+	        android:background="@drawable/green_button"
+	        android:src="@drawable/ic_action_done"
+        	android:contentDescription="@string/apply_button"
+	        android:onClick="applyPressed"
+	        />
+        
+        <ImageButton
+            android:id="@+id/dismiss_button"
+            style="@style/apply_button"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/red_button"
+	        android:src="@drawable/ic_action_cancel"
+            android:onClick="dismissPressed"
+            android:contentDescription="@string/dismiss_button" />
+    </LinearLayout>
+
+</LinearLayout>
